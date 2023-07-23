@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim AS builder
+FROM debian:bookworm-slim AS builder
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PHP_VERSION=8.2
 

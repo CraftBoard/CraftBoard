@@ -6,7 +6,7 @@ switch ($_GET["server_action"]) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "forcestop":
-    shell_exec('cd ./files/servers/'.$_GET["server_name"].' && docker-compose stop');
+      shell_exec('cd ./files/servers/'.$_GET["server_name"].' && docker-compose stop');
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "start":
