@@ -64,6 +64,9 @@ switch ($_POST['servertype']) {
         break;
     case 'fabric':
         switch ($_POST['serverversion']) {
+            case '1.20.2':
+                $userunner = 'craftboard/runner-alpaquita-liberica-17';
+                break;
             case '1.19.3':
                 $userunner = 'craftboard/runner-alpaquita-liberica-17';
                 break;
