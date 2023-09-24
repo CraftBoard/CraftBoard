@@ -115,7 +115,7 @@
         function versionselect() {
             if (document.getElementById('servertype').value != "custom") {
                 if (document.getElementById('servertype').value == "vannila") {
-                    document.getElementById("p1").innerHTML = '<h6 class="mb-4"><?php echo $lang['serverversion']; ?></h6><select class="form-select mb-3" name="serverversion" id="serverversion" required><option value="1.20.2">1.20.2</option></select> <option value="1.19.3">1.19.3</option> <option value="1.16.5">1.16.5</option></select>';
+                    document.getElementById("p1").innerHTML = '<h6 class="mb-4"><?php echo $lang['serverversion']; ?></h6><select class="form-select mb-3" name="serverversion" id="serverversion" required><option value="1.20.2">1.20.2</option> <option value="1.19.3">1.19.3</option> <option value="1.16.5">1.16.5</option></select>';
                 }
                 if (document.getElementById('servertype').value == "fabric") {
                     document.getElementById("p1").innerHTML = '<h6 class="mb-4"><?php echo $lang['serverversion']; ?></h6><select class="form-select mb-3" name="serverversion" id="serverversion" required><option value="1.19.3">1.19.3</option> <option value="1.16.5">1.16.5</option></select>';
