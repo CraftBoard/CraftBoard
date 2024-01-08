@@ -1,5 +1,5 @@
 <?php
-$ACEVERSION = "1.28.0";
+$ACEVERSION = "1.32.3";
 echo'
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
 <div style="position: static; width: 100%; height: 90%;">
