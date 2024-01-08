@@ -5,4 +5,4 @@ FIXPATH="$TRUEPATH/servers/$2/server"
 sed -i -e "s|- ./server:/opt/server|- $FIXPATH:/opt/server|g" docker-compose.yml
 chmod -R 777 server
 chown -R nobody:nobody server
-docker-compose up -d
+docker compose up -d
