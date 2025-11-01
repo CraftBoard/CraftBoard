@@ -11,16 +11,16 @@ fclose($file);
 
 switch ($_POST['servertype']) {
     case 'vannila':
-        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://serverjars.com/api/fetchJar/servers/purpur/'.$_POST['serverversion']));
+        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/purpur/'.$_POST['serverversion'].'/download')));
         break;
     case 'vannilaold':
-        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://serverjars.com/api/fetchJar/vanilla/vanilla/'.$_POST['serverversion']));
+        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/vanilla/'.$_POST['serverversion'].'/download'));
         break;
     case 'fabric':
-        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://serverjars.com/api/fetchJar/modded/fabric/'.$_POST['serverversion']));
+        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/fabric/'.$_POST['serverversion'].'/download'));
         break;
     case 'forge':
-        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://serverjars.com/api/fetchJar/modded/mohist/'.$_POST['serverversion']));
+        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/forge/'.$_POST['serverversion'].'/download'));
         break;
     case 'custom':
         file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents($_POST['customjar']));
@@ -51,6 +51,9 @@ switch ($_POST['servertype']) {
         break;
     case 'vannilaold':
         switch ($_POST['serverversion']) {
+            case '1.21.10':
+                $userunner = 'craftboard/runner-alpaquita-liberica-21';
+                break;
             case '1.20.2':
                 $userunner = 'craftboard/runner-alpaquita-liberica-17';
                 break;
@@ -67,6 +70,9 @@ switch ($_POST['servertype']) {
         break;
     case 'fabric':
         switch ($_POST['serverversion']) {
+            case '1.21.10':
+                $userunner = 'craftboard/runner-alpaquita-liberica-21';
+                break;
             case '1.20.2':
                 $userunner = 'craftboard/runner-alpaquita-liberica-17';
                 break;
@@ -80,6 +86,9 @@ switch ($_POST['servertype']) {
         break;
     case 'forge':
         switch ($_POST['serverversion']) {
+            case '1.21.10':
+                $userunner = 'craftboard/runner-alpaquita-liberica-21';
+                break;
             case '1.19.3':
                 $userunner = 'craftboard/runner-alpaquita-liberica-17';
                 break;
