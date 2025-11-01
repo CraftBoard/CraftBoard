@@ -6,11 +6,11 @@ switch ($_GET["server_action"]) {
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "forcestop":
-      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].' stop');
+      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].'/docker-compose.yml stop');
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "start":
-      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].' up -d');
+      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].'/docker-compose.yml up -d');
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "restart":
@@ -22,7 +22,7 @@ switch ($_GET["server_action"]) {
         $server_info = json_decode($server_info_json, true);
         sleep(1);
       }
-      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].' up -d');
+      shell_exec('docker compose -f ./files/servers/'.$_GET["server_name"].'/docker-compose.yml up -d');
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       break;
   case "backup":
