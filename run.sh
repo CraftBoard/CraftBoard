@@ -6,6 +6,6 @@ chmod -R 777 files/
 chmod 777 /run/docker.sock
 nginx -g 'daemon off;' &
 P1=$!
-php-fpm8.3 &
+php-fpm8.4 &
 P2=$!
 wait $P1 $P2

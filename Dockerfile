@@ -1,6 +1,6 @@
-FROM debian:bookworm-slim AS builder
+FROM debian:trixie-slim AS builder
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PHP_VERSION=8.3
+ENV PHP_VERSION=8.4
 
 # Update OS
 RUN apt-get update && apt-get dist-upgrade -y

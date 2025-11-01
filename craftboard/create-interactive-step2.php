@@ -35,6 +35,9 @@ function userunner($runner)
 switch ($_POST['servertype']) {
     case 'vannila':
         switch ($_POST['serverversion']) {
+            case '1.21.10':
+                $userunner = 'craftboard/runner-alpaquita-liberica-21';
+                break;
             case '1.20.2':
                 $userunner = 'craftboard/runner-alpaquita-liberica-17';
                 break;
