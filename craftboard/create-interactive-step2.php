@@ -11,7 +11,7 @@ fclose($file);
 
 switch ($_POST['servertype']) {
     case 'vannila':
-        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/purpur/'.$_POST['serverversion'].'/download')));
+        file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/purpur/'.$_POST['serverversion'].'/download'));
         break;
     case 'vannilaold':
         file_put_contents('./files/servers/'.$_POST['servername'].'/server/server.jar', file_get_contents('https://mcutils.com/api/server-jars/vanilla/'.$_POST['serverversion'].'/download'));
